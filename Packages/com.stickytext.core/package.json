@@ -1,0 +1,24 @@
+{
+  "name": "com.stickytext.core",
+  "version": "1.0.0",
+  "displayName": "StickyText",
+  "description": "Scene view tool for placing world-space TextMeshPro sticky notes on level geometry. Drag a rectangle to place annotations, bug pins, and blockout notes — with tags, colour management, and automatic stripping from builds.",
+  "unity": "6000.0",
+  "keywords": [
+    "level-design",
+    "annotation",
+    "text",
+    "editor-tool",
+    "blockout"
+  ],
+  "author": {
+    "name": "POLI Enzo",
+    "url": "https://github.com/MyUserNameIsSkave"
+  },
+  "documentationUrl": "https://github.com/MyUserNameIsSkave/StickyText",
+  "changelogUrl": "https://github.com/MyUserNameIsSkave/StickyText/blob/main/Packages/com.stickytext.core/CHANGELOG.md",
+  "licensesUrl": "https://github.com/MyUserNameIsSkave/StickyText/blob/main/Packages/com.stickytext.core/LICENSE.md",
+  "dependencies": {
+    "com.unity.ugui": "2.0.0"
+  }
+}

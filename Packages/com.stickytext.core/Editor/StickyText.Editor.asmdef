@@ -1,0 +1,19 @@
+{
+    "name": "StickyText.Editor",
+    "rootNamespace": "StickyText.EditorTools",
+    "references": [
+        "StickyText",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
