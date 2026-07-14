@@ -182,6 +182,16 @@ namespace StickyText.EditorTools
         bool m_TagsFoldout = true;
         bool m_ListFoldout = true;
 
+        // Sorting by tag follows the Tag Manager's own list order rather than alphabetically —
+        // DEFAULT (no tag) sorts first, matching its fixed position above every real tag there.
+        static int TagSortIndex(string tagName)
+        {
+            if (string.IsNullOrEmpty(tagName))
+                return -1;
+            int index = StickyTextTagRegistry.Instance.tags.FindIndex(t => t.name == tagName);
+            return index >= 0 ? index : int.MaxValue; // orphaned tag name (deleted tag) sorts last
+        }
+
         void DrawManagementPage()
         {
             // Same outer side margin as the fold boxes below, wrapping the note too so its
@@ -233,7 +243,7 @@ namespace StickyText.EditorTools
                 labels = m_SortColumn switch
                 {
                     SortColumn.Text => labels.OrderBy(l => l.Text, StringComparer.OrdinalIgnoreCase),
-                    SortColumn.Tag => labels.OrderBy(l => l.Tag, StringComparer.OrdinalIgnoreCase),
+                    SortColumn.Tag => labels.OrderBy(l => TagSortIndex(l.Tag)),
                     SortColumn.EditorOnly => labels.OrderBy(l => l.EditorOnly),
                     _ => labels,
                 };
