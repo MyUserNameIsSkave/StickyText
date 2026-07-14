@@ -16,8 +16,8 @@
     "url": "https://github.com/MyUserNameIsSkave"
   },
   "documentationUrl": "https://github.com/MyUserNameIsSkave/StickyText",
-  "changelogUrl": "https://github.com/MyUserNameIsSkave/StickyText/blob/main/Packages/com.stickytext.core/CHANGELOG.md",
-  "licensesUrl": "https://github.com/MyUserNameIsSkave/StickyText/blob/main/Packages/com.stickytext.core/LICENSE.md",
+  "changelogUrl": "https://github.com/MyUserNameIsSkave/StickyText/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/MyUserNameIsSkave/StickyText/blob/main/LICENSE.md",
   "dependencies": {
     "com.unity.ugui": "2.0.0"
   }

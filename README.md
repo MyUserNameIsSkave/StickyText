@@ -2,17 +2,32 @@
 
 Scene view tool for placing world-space TextMeshPro sticky notes on level geometry. Drag a rectangle in the viewport, type, done — annotations, bug pins, and blockout notes that live in the scene, organized with coloured tags, and stripped from your builds automatically.
 
+## Features
+
+- **Drag-to-place** — drag a rectangle directly on level geometry in the Scene view; the label sizes itself to the rectangle and auto-fits its text.
+- **Three placement modes** — Face Camera, Align to Surface, and Fixed Distance (see [Placement modes](#placement-modes)), switchable mid-drag.
+- **Coloured tag system** — tags drive the text/background colour and the Editor Only default of every label using them; recolour a tag and every label using it follows. Per-label overrides stick until the tag is reassigned.
+- **Management window** (Tools ▸ StickyText) — searchable/sortable label list, tag manager, and settings in one place.
+- **Scene view overlay** mirroring the most-used settings while placing, so you rarely need to leave the viewport.
+- **Configurable build stripping** — None / Editor Only / All, set independently for Development and Release builds.
+- **Mesh-picking or collider-raycast** surface detection for placement, with independent sample counts for each.
+
 ## Installation
 
 **Via git URL** (Package Manager ▸ `+` ▸ *Install package from git URL…*):
 
 ```
-https://github.com/MyUserNameIsSkave/StickyText.git?path=Packages/com.stickytext.core
+https://github.com/MyUserNameIsSkave/StickyText.git
 ```
 
-Requires Unity 6000.0+ and TextMeshPro (`com.unity.ugui` 2.0, installed automatically).
+Or download the `.unitypackage` from the [latest release](https://github.com/MyUserNameIsSkave/StickyText/releases/latest) and import it (**Assets > Import Package > Custom Package...**, or just double-click it).
 
-## Getting started
+## Requirements
+
+- Unity 6000.0 or newer
+- TextMeshPro (`com.unity.ugui` 2.0) — installed automatically as a dependency
+
+## Usage
 
 1. Activate the **StickyText** tool in the Scene view toolbar (or bind a shortcut under Edit ▸ Shortcuts ▸ StickyText).
 2. Drag a rectangle on your level geometry and type. The label sizes itself to the rectangle.
@@ -35,6 +50,12 @@ Create coloured tags from the Management page (Tools ▸ StickyText). Each tag d
 ### Editor Only & build stripping
 
 Labels marked **Editor Only** are dev-only markers: hidden in Play Mode, and stripped from builds. What gets stripped from Development and Release builds is configurable separately (None / Editor Only / All) in the Settings page.
+
+## AI disclosure
+
+Parts of this package (notably the Editor tooling, rendering/material setup, and refactoring passes) were written with the assistance of an LLM (Claude, by Anthropic). Design decisions and testing were human-driven; the LLM was used as a coding assistant, not an autonomous author.
+
+(And yes, this README was drafted by the same LLM.)
 
 ## License
 
