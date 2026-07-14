@@ -2,6 +2,8 @@
 
 Scene view tool for placing world-space TextMeshPro sticky notes on level geometry. Drag a rectangle in the viewport, type, and you're done: annotations, bug pins, and blockout notes that live in the scene, organized with coloured tags and stripped from your builds automatically.
 
+https://github.com/MyUserNameIsSkave/StickyText/releases/download/v1.0.0/Stickytext_Demo.mp4
+
 ## Features
 
 - **Drag-to-place**: drag a rectangle directly on level geometry in the Scene view; the label sizes itself to the rectangle and auto-fits its text.
